@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cfd5rvvy23lbp"
+path="res://.godot/imported/dimSum.obj-70cfa17f7417e7593a354422cd8885bb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/dimSum.obj-70cfa17f7417e7593a354422cd8885bb.mesh"]
+
+source_file="res://kenney_food-kit/Models/OBJ format/dimSum.obj"
+dest_files=["res://.godot/imported/dimSum.obj-70cfa17f7417e7593a354422cd8885bb.mesh", "res://.godot/imported/dimSum.obj-70cfa17f7417e7593a354422cd8885bb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

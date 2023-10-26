@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://civwjbhu1rgcj"
+path="res://.godot/imported/honey.obj-5c8fb44a3b3051f65a9424578356e52c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/honey.obj-5c8fb44a3b3051f65a9424578356e52c.mesh"]
+
+source_file="res://kenney_food-kit/Models/OBJ format/honey.obj"
+dest_files=["res://.godot/imported/honey.obj-5c8fb44a3b3051f65a9424578356e52c.mesh", "res://.godot/imported/honey.obj-5c8fb44a3b3051f65a9424578356e52c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

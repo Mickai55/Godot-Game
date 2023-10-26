@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvxlg24mf5km4"]
+
+[ext_resource type="Texture2D" path="res://Models/banana.png" id="1_iaft4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u2g5q"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.108577, 0)
+shape = SubResource("BoxShape3D_u2g5q")
+
+[node name="Sprite3D" type="Sprite3D" parent="CharacterBody3D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(315, 272)
+scale = Vector2(10.8438, 9.5)
+texture = ExtResource("1_iaft4")
