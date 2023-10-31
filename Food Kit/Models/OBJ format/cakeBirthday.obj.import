@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cj7wm3u31eugv"
+path="res://.godot/imported/cakeBirthday.obj-e303e3ccb94735a011787a39f0f05601.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cakeBirthday.obj-e303e3ccb94735a011787a39f0f05601.mesh"]
+
+source_file="res://Food Kit/Models/OBJ format/cakeBirthday.obj"
+dest_files=["res://.godot/imported/cakeBirthday.obj-e303e3ccb94735a011787a39f0f05601.mesh", "res://.godot/imported/cakeBirthday.obj-e303e3ccb94735a011787a39f0f05601.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

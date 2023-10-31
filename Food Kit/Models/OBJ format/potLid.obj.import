@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dudq21gt2x1vp"
+path="res://.godot/imported/potLid.obj-696dd697e1a6f2f786b21c91ddc3de86.mesh"
+
+[deps]
+
+files=["res://.godot/imported/potLid.obj-696dd697e1a6f2f786b21c91ddc3de86.mesh"]
+
+source_file="res://Food Kit/Models/OBJ format/potLid.obj"
+dest_files=["res://.godot/imported/potLid.obj-696dd697e1a6f2f786b21c91ddc3de86.mesh", "res://.godot/imported/potLid.obj-696dd697e1a6f2f786b21c91ddc3de86.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

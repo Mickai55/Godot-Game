@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://di6svd216trl0"
+path="res://.godot/imported/run.obj-66ee11383f478ecdb494978344f2a505.mesh"
+
+[deps]
+
+files=["res://.godot/imported/run.obj-66ee11383f478ecdb494978344f2a505.mesh"]
+
+source_file="res://Food Kit/Models/OBJ format/Character/Animations/run.obj"
+dest_files=["res://.godot/imported/run.obj-66ee11383f478ecdb494978344f2a505.mesh", "res://.godot/imported/run.obj-66ee11383f478ecdb494978344f2a505.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

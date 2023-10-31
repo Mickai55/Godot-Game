@@ -1,0 +1,96 @@
+[gd_scene load_steps=14 format=3 uid="uid://bvxlg24mf5km4"]
+
+[ext_resource type="ArrayMesh" uid="uid://bs82sctopywu0" path="res://Food Kit/Models/OBJ format/apple.obj" id="1_4tlck"]
+[ext_resource type="ArrayMesh" uid="uid://dvhl6dof6wlgs" path="res://Food Kit/Models/OBJ format/avocado.obj" id="2_xqkds"]
+[ext_resource type="ArrayMesh" uid="uid://cv3k60kwu6fix" path="res://Food Kit/Models/OBJ format/leek.obj" id="3_7yg2o"]
+[ext_resource type="ArrayMesh" uid="uid://bpcnaq0rx3kyq" path="res://Food Kit/Models/OBJ format/sandwich.obj" id="4_bqcvu"]
+[ext_resource type="ArrayMesh" uid="uid://bn7hy5x1j4qo0" path="res://Food Kit/Models/OBJ format/pizza.obj" id="5_nnsau"]
+[ext_resource type="Script" path="res://Player.gd" id="6_o8fj2"]
+[ext_resource type="PackedScene" uid="uid://dk8q6s2qsnaff" path="res://mocio.glb" id="7_kijqd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aj8hf"]
+size = Vector3(6, 1, 6)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hlqdc"]
+albedo_color = Color(0.117647, 0.117647, 0.117647, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2s78g"]
+material = SubResource("StandardMaterial3D_hlqdc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n13d7"]
+emission_enabled = true
+emission = Color(0, 0.603922, 0, 1)
+emission_energy_multiplier = 5.49
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jtj4l"]
+albedo_color = Color(1, 0.133333, 0.215686, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_mbm6r"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, 4.98934e-08, -7.17871e-08, -2.28374e-08, 0.643549, 0.765405, 8.43872e-08, 0.765405, -0.643549, 0.00392294, 3.32378, -2.56063)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.22586, 3.69732)
+light_energy = 4.657
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0187263, 0.999825, 0, -0.999825, 0.0187263, 0, 10.8428, 0.101494)
+
+[node name="Ground" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("BoxShape3D_aj8hf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(6, 0, 0, 0, 1, 0, 0, 0, 6, 0, 0, 0)
+mesh = SubResource("BoxMesh_2s78g")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -1)
+material_override = SubResource("StandardMaterial3D_n13d7")
+transparency = 0.68
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 0.173648, 0.984808, 0, -0.984808, 0.173648, 1, 1, 2)
+material_override = SubResource("StandardMaterial3D_jtj4l")
+
+[node name="Apple" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -1)
+mesh = ExtResource("1_4tlck")
+skeleton = NodePath("../..")
+
+[node name="Avocado" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(-0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, -0.866025, 1.97353, 0.575104, 0)
+mesh = ExtResource("2_xqkds")
+skeleton = NodePath("../..")
+
+[node name="Leek" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.55751, 1)
+mesh = ExtResource("3_7yg2o")
+skeleton = NodePath("../..")
+
+[node name="Sandwich" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13027, 0.5, -0.17043)
+mesh = ExtResource("4_bqcvu")
+skeleton = NodePath("../..")
+
+[node name="Pizza" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.01568, 0.5, -1.11984)
+mesh = ExtResource("5_nnsau")
+skeleton = NodePath("../Leek")
+
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, -0.2)
+script = ExtResource("6_o8fj2")
+
+[node name="Pivot" type="Node3D" parent="Player"]
+
+[node name="mocio" parent="Player/Pivot" instance=ExtResource("7_kijqd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08, 0, -0.2)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(0.575, 0, 0, 0, 0.7, 0, 0, 0, 0.39, 0.0187078, 0, -0.00824931)
+shape = SubResource("SphereShape3D_mbm6r")
