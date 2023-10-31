@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c7mjhb3fbsldu"
+path="res://.godot/imported/jump.obj-682e74ea3f12336b63c96e1b33fa382e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/jump.obj-682e74ea3f12336b63c96e1b33fa382e.mesh"]
+
+source_file="res://Character/Animations/jump.obj"
+dest_files=["res://.godot/imported/jump.obj-682e74ea3f12336b63c96e1b33fa382e.mesh", "res://.godot/imported/jump.obj-682e74ea3f12336b63c96e1b33fa382e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

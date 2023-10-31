@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://6a658gxrfkv2"
+path="res://.godot/imported/idle.obj-601ec3b2d85f8531d9a5e17dd0c194fb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/idle.obj-601ec3b2d85f8531d9a5e17dd0c194fb.mesh"]
+
+source_file="res://Food Kit/Models/OBJ format/Character/Animations/idle.obj"
+dest_files=["res://.godot/imported/idle.obj-601ec3b2d85f8531d9a5e17dd0c194fb.mesh", "res://.godot/imported/idle.obj-601ec3b2d85f8531d9a5e17dd0c194fb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bpcnaq0rx3kyq"
+path="res://.godot/imported/sandwich.obj-2467cc4a08ccad4a8902f32b0e94b6fb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/sandwich.obj-2467cc4a08ccad4a8902f32b0e94b6fb.mesh"]
+
+source_file="res://Food Kit/Models/OBJ format/sandwich.obj"
+dest_files=["res://.godot/imported/sandwich.obj-2467cc4a08ccad4a8902f32b0e94b6fb.mesh", "res://.godot/imported/sandwich.obj-2467cc4a08ccad4a8902f32b0e94b6fb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

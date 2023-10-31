@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cvf22fy5rv8c5"
+path="res://.godot/imported/soy.obj-27ed5a901b7504060d53d865d2c33cd1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/soy.obj-27ed5a901b7504060d53d865d2c33cd1.mesh"]
+
+source_file="res://Food Kit/Models/OBJ format/soy.obj"
+dest_files=["res://.godot/imported/soy.obj-27ed5a901b7504060d53d865d2c33cd1.mesh", "res://.godot/imported/soy.obj-27ed5a901b7504060d53d865d2c33cd1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

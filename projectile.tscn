@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c50nu4elb5fim"]
+
+[ext_resource type="ArrayMesh" uid="uid://d2olxpwpetuyx" path="res://Food Kit/Models/OBJ format/utensilKnife.obj" id="1_4vm03"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mgy67"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+
+[node name="UtensilKnife" type="MeshInstance3D" parent="RigidBody3D"]
+mesh = ExtResource("1_4vm03")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(0.5938, 0, 0, 0, 0.0585931, 0, 0, 0, 0.1, 0, 0, 0)
+shape = SubResource("BoxShape3D_mgy67")
