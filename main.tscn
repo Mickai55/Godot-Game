@@ -26,6 +26,7 @@ emission_energy_multiplier = 5.49
 albedo_color = Color(1, 0.133333, 0.215686, 1)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_mbm6r"]
+resource_name = "Player"
 
 [node name="Node3D" type="Node3D"]
 
@@ -82,7 +83,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.01568, 0.5, -1.11984)
 mesh = ExtResource("5_nnsau")
 skeleton = NodePath("../Leek")
 
-[node name="Player" type="CharacterBody3D" parent="."]
+[node name="Player" type="CharacterBody3D" parent="." groups=["player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, -0.2)
 script = ExtResource("6_o8fj2")
 
@@ -91,6 +92,8 @@ script = ExtResource("6_o8fj2")
 [node name="mocio" parent="Player/Pivot" instance=ExtResource("7_kijqd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08, 0, -0.2)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" groups=["player"]]
 transform = Transform3D(0.575, 0, 0, 0, 0.7, 0, 0, 0, 0.39, 0.0187078, 0, -0.00824931)
 shape = SubResource("SphereShape3D_mbm6r")
+
+[connection signal="input_event" from="Player" to="Player" method="_on_input_event"]

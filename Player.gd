@@ -6,7 +6,22 @@ extends CharacterBody3D
 
 var target_velocity = Vector3.ZERO
 
+var start_time = null
+var shootingDelay = 0.2 # 1 / shootingRate == cate proiectile trage pe secunda (aici 5)
+var shootedAtTime = 0
+
+var projectile = load('res://projectile.tscn')
+	
+func _ready():
+	start_time = Time.get_unix_time_from_system()
+#	add_collision_exception_with(projectile)
+
+
 func _physics_process(delta):
+	for index in range(get_slide_collision_count()):
+		var collision = get_slide_collision(index)
+		print(collision)
+	
 	# We create a local variable to store the input direction.
 	var direction = Vector3.ZERO
 
@@ -30,17 +45,23 @@ func _physics_process(delta):
 
 	# Vertical Velocity
 #	if not is_on_floor(): # If in the air, fall towards the floor. Literally gravity
-#	target_velocity.y = target_velocity.y - (fall_acceleration * delta)
-
+#		target_velocity.y = target_velocity.y - (fall_acceleration * delta)
+#	else:
+#		target_velocity.y = 0
 	# Moving the Character
 	velocity = target_velocity
 	move_and_slide()
 	
+	var gameTimer = Time.get_unix_time_from_system() - start_time
 	if Input.is_action_pressed("shoot"):
-		spawnProjectile()
+		if gameTimer - shootedAtTime > shootingDelay:
+			shootedAtTime = gameTimer
+			spawnProjectile()
+			
+		
 
 func spawnProjectile():
-	var projectile = load('res://projectile.tscn')
 	var projectileCopy = projectile.instantiate()
 	projectileCopy.position = position
 	get_parent().add_child(projectileCopy)
+

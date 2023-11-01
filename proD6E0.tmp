@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c50nu4elb5fim"]
+[gd_scene load_steps=4 format=3 uid="uid://c50nu4elb5fim"]
 
 [ext_resource type="ArrayMesh" uid="uid://d2olxpwpetuyx" path="res://Food Kit/Models/OBJ format/utensilKnife.obj" id="1_4vm03"]
 [ext_resource type="Script" path="res://projectile.gd" id="1_kbb4n"]
-[ext_resource type="Script" path="res://RigidBody3D.gd" id="1_x4r1q"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mgy67"]
 resource_name = "Knife"
@@ -12,7 +11,6 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 script = ExtResource("1_kbb4n")
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
-script = ExtResource("1_x4r1q")
 
 [node name="UtensilKnife" type="MeshInstance3D" parent="RigidBody3D"]
 mesh = ExtResource("1_4vm03")
